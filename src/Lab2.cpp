@@ -4,24 +4,16 @@
 
 #include "Particle.h"
 #line 1 "/Users/admin/Documents/CTD_2023/Labs/Lab2/src/Lab2.ino"
-/*
- * Project Lab2
- * Description:
- * Author:
- * Date:
- */
-
-// setup() runs once, when the device is first turned on.
 void setup();
 void loop();
-#line 9 "/Users/admin/Documents/CTD_2023/Labs/Lab2/src/Lab2.ino"
+#line 1 "/Users/admin/Documents/CTD_2023/Labs/Lab2/src/Lab2.ino"
+SYSTEM_MODE(MANUAL);
+SYSTEM_THREAD(ENABLED);
+uint16_t value = analogRead(A5);
 void setup() {
-  // Put initialization like pinMode and begin functions here.
-
+  Serial.begin(9600);
 }
-
-// loop() runs over and over again, as quickly as it can execute.
 void loop() {
-  // The core of your code will likely live here.
-
+  value = analogRead(A5);
+  Serial.println(value);
 }
